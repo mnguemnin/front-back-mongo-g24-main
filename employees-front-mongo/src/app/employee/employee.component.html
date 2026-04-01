@@ -1,0 +1,35 @@
+<table border="1">
+    <thead></thead>
+    <tr>
+      <th>empId</th>
+      <th>name</th>
+      <th>designation</th>
+      <th>salary</th>
+      </tr>
+
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.empId}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.salary}}</td>
+            <td><button (click)="delete(employee.empId)">delete</button></td>
+        </tr>
+
+    </tbody>
+      </table>
+<th>empId</th> <td><input  type="text" [(ngModel)]="empId"></td>
+<br>
+<br>
+<th>name</th><input  type="text" [(ngModel)]="name">
+<br>
+<br>
+<th>designation</th><input  type="text" [(ngModel)]="designation">
+<br>
+<br>
+<th>salary</th><input  type="text" [(ngModel)]="salary">
+<br>
+<br>
+<button (click)="add()">add</button>
+<h4></h4>
+
